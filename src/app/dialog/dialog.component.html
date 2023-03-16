@@ -1,17 +1,27 @@
-<h1 mat-dialog-title>Форма добавления авто</h1>
+<h1 mat-dialog-title>Додавання авто</h1>
 
 <div mat-dialog-content>
 
 	<form [formGroup]="form">
 
 		<mat-form-field appearance="outline">
-			<mat-label>Наименование товара</mat-label>
-			<input formControlName="name" matInput placeholder="Введите название товара">
+			<mat-label>Номерний знак</mat-label>
+			<input formControlName="sign" matInput placeholder="Введіть номерний знак">
 		</mat-form-field>
 
 		<mat-form-field appearance="outline">
-			<mat-label>Категория товара</mat-label>
-			<mat-select formControlName="category" placeholder="Выберите категорию товара">
+			<mat-label>Модель авто</mat-label>
+			<input formControlName="model" matInput placeholder="Введіть модель">
+			</mat-form-field>
+			
+			<mat-form-field appearance="outline">
+				<mat-label>Яке призначення</mat-label>
+				<input formControlName="appointment" matInput placeholder="Призначення">
+			</mat-form-field>
+			
+			<!-- <mat-form-field appearance="outline">
+																								<mat-label>Модель</mat-label>
+																								<mat-select formControlName="model" placeholder="Виберіть модель авто">
 				<mat-option [value]="'Компьютеры'">Компьютеры</mat-option>
 				<mat-option [value]="'Ноутбуки'">Ноутбуки</mat-option>
 				<mat-option [value]="'Планшеты'">Планшеты</mat-option>
@@ -20,16 +30,25 @@
 				<mat-option [value]="'Акустика'">Акустика</mat-option>
 				<mat-option [value]="'Оргтехника'">Оргтехника</mat-option>
 			</mat-select>
-		</mat-form-field>
-
+		</mat-form-field> -->
+		
 		<mat-form-field appearance="outline">
-			<mat-label>Choose a date</mat-label>
-			<input formControlName="date" matInput [matDatepicker]="picker">
-			<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-			<mat-datepicker #picker></mat-datepicker>
+			<mat-label>Дата в'їзду</mat-label>
+			<input formControlName="comeDate" matInput [matDatepicker]="picker1">
+			<mat-hint>дата/місяць/рік</mat-hint>
+			<mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+			<mat-datepicker #picker1></mat-datepicker>
 		</mat-form-field>
-
-		<label id="example-radio-group-label">
+		
+		<mat-form-field appearance="outline">
+			<mat-label>Дата виїзду</mat-label>
+			<input formControlName="outDate" matInput [matDatepicker]="picker2">
+			<mat-hint>дата/місяць/рік</mat-hint>
+			<mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+			<mat-datepicker #picker2></mat-datepicker>
+		</mat-form-field>
+		
+		<!-- <label id="example-radio-group-label">
 			<h2>Состояние товара</h2>
 		</label>
 		<mat-radio-group formControlName="productCondition" aria-labelledby="example-radio-group-label"
@@ -37,18 +56,18 @@
 			<mat-radio-button class="example-radio-button" *ngFor="let el of productConditionList" [value]="el">
 				{{el}}
 			</mat-radio-button>
-		</mat-radio-group>
+		</mat-radio-group> -->
 
-		<mat-form-field appearance="outline">
+		<!-- <mat-form-field appearance="outline">
 			<mat-label>Цена, $</mat-label>
 			<input formControlName="price" matInput placeholder="Цена товара..." type="number">
-		</mat-form-field>
+		</mat-form-field> -->
 
-		<mat-form-field appearance="outline">
+		<!-- <mat-form-field appearance="outline">
 			<mat-label>Дополнительно</mat-label>
 			<textarea formControlName="comment" cdkAutosizeMaxRows="5" cdkAutosizeMinRows="1" cdkTextareaAutosize
 				matInput></textarea>
-		</mat-form-field>
+		</mat-form-field> -->
 
 		<div [align]="'end'" mat-dialog-actions>
 			<button mat-dialog-close="" mat-raised-button>Отмена</button>

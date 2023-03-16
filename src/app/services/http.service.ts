@@ -14,12 +14,12 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 	
-//CREATE------------------------------------------
+//CREATE---------------------------------------------
 	createData(car: CarInterface) {
 		return this.http.post<CarInterface>(`${url}.json`, car);
 	}
 	
-//READ--------------------------------------------
+//READ-----------------------------------------------
 getData() {
   return this.http.get<{ [key: string]: CarInterface }>(`${url}.json`)
     .pipe(
@@ -39,7 +39,6 @@ getData() {
 updateData(car: CarInterface, id: string) {
   return this.http.put(`${url}/${id}.json`, car);
 }
-
 	
 	//DELETE------------------------------------------
 	deleteData(id: string) {

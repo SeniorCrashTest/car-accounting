@@ -2,6 +2,8 @@ import { Component, Inject , OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpService } from '../services/http.service';
+import { DateAdapter } from '@angular/material/core';
+
 
 
 	@Component({
@@ -12,10 +14,11 @@ import { HttpService } from '../services/http.service';
 
 export class DialogComponent implements OnInit {
 
-  productConditionList = ['Новый', 'Б/у', 'После ремонта'];
   form!: FormGroup;
 	
-	constructor(private fb: FormBuilder, private httpService: HttpService, private dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public editData: any) {}
+	constructor(private fb: FormBuilder, private httpService: HttpService, private dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public editData: any, private dateAdapter: DateAdapter<Date>) {
+		this.dateAdapter.setLocale('en-GB');
+	}
 
   ngOnInit(): void {
 		this.initializeForm()
@@ -52,12 +55,11 @@ export class DialogComponent implements OnInit {
 
 	private initializeForm(): void {
 		this.form = this.fb.group({
-			name: [this.editData?.name || '', Validators.required],
-			category: [this.editData?.category || '', Validators.required],
-			productCondition: [this.editData?.productCondition || '', Validators.required],
-			price: [this.editData?.price || '', Validators.required],
-			comment: [this.editData?.comment || '', Validators.required],
-			date: [this.editData?.date || '', Validators.required]
+			sign: [this.editData?.sign || '', Validators.required],
+			model: [this.editData?.model || '', Validators.required],
+			appointment: [this.editData?.appointment || '', Validators.required],
+			comeDate: [this.editData?.comeDate || '', Validators.required],
+			outDate: [this.editData?.outDate || '', Validators.required]
 		});
 	}
 }
