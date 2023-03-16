@@ -3,6 +3,7 @@ export interface CarInterface {
 	sign: string;
   model: string;
   appointment: string;
-  date: string;
+  comeDate: string;
+  outDate: string;
 	id: string;
 }
