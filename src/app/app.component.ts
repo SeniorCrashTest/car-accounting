@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
 
 	createProduct(): void {
 			this.dialog.open(DialogComponent, {
-			width: '30%'
+			width: '70%'
 		}).afterClosed().subscribe(res => {
 			console.log(res);
 			this.fetchData();
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
 
 	updateProduct(row: any): void {
 		this.dialog.open(DialogComponent, {
-			width: '30%',
+			width: '70%',
 			data: row
 		}).afterClosed().subscribe(res => {
 			console.log(res);
