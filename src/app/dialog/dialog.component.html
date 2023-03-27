@@ -36,11 +36,19 @@
 			<mat-datepicker #picker2></mat-datepicker>
 		</mat-form-field>
 
+<!--------------------Тест------------------------- -->
+<!--------------------Тест------------------------- -->
+
+
+
+<!--------------------Тест------------------------- -->
+<!--------------------Тест------------------------- -->
+
 		<div [align]="'end'" mat-dialog-actions>
 			<button mat-dialog-close="" mat-raised-button>Отмена</button>
 			<button (click)="editData ? updateProduct() : addProduct()" [disabled]="form.invalid" color="accent"
-				mat-raised-button>{{editData ? 'Изменить' : 'Сохранить'}}</button>
+			mat-raised-button>{{editData ? 'Изменить' : 'Сохранить'}}</button>
 		</div>
 	</form>
-
+	
 </div>
