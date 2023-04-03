@@ -1,17 +1,18 @@
 <div class="container">
 	<mat-toolbar>
 		<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-			<mat-icon>home</mat-icon>
+			<mat-icon>directions_car</mat-icon>
 		</button>
-		<span>Журнал проезда</span>
-		<span class="example-spacer"></span> <button (click)="createProduct()" mat-button color="accent">Додати авто</button>
+		<span class="top-title">Журнал проїзду</span>
+		<span class="example-spacer"></span> <button (click)="createProduct()" mat-raised-button color="primary">Додати
+			авто</button>
 	</mat-toolbar>
 </div>
 
 <div class="container">
 	<mat-form-field>
 		<mat-label>Пошук</mat-label>
-		<input matInput (keydown)="applyFilter($event)" placeholder="Пошук" #input>
+		<input matInput (keydown)="applyFilter($event)" #input>
 	</mat-form-field>
 	<div class="mat-elevation-z8">
 		<table mat-table [dataSource]="dataSource" matSort>

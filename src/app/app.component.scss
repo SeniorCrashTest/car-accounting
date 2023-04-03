@@ -1,6 +1,5 @@
-.example-spacer {
-	flex: 1 1 auto;
-}
+// .example-spacer {
+// }
 
 .container {
 	max-width: auto;
@@ -15,4 +14,23 @@ table {
 .mat-mdc-form-field {
 	font-size: 14px;
 	width: 100%;
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-mdc-button-touch-target {
+  width: 30%;
+}
+
+.top-title {
+  width: 30%;
+}
+
+.mdc-button--raised {
+  width: 200px;
+  margin: 0 auto;
 }
