@@ -12,12 +12,12 @@
 		<mat-form-field appearance="outline">
 			<mat-label>Модель авто</mat-label>
 			<input formControlName="model" matInput placeholder="Введіть модель">
-			</mat-form-field>
+		</mat-form-field>
 			
-			<mat-form-field appearance="outline">
-				<mat-label>Яке призначення</mat-label>
-				<input formControlName="appointment" matInput placeholder="Призначення">
-			</mat-form-field>
+		<mat-form-field appearance="outline">
+			<mat-label>Яке призначення</mat-label>
+			<input formControlName="appointment" matInput placeholder="Призначення">
+		</mat-form-field>
 		
 		
 		<mat-form-field appearance="outline">
@@ -27,7 +27,12 @@
 			<mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
 			<mat-datepicker #picker1></mat-datepicker>
 		</mat-form-field>
-		
+
+		<mat-form-field appearance="outline">
+			<mat-label>Час в'їзду</mat-label>
+			<input formControlName="comeTime" matInput inputmode="numeric" placeholder="Годин - Хвилин">
+		</mat-form-field>
+
 		<mat-form-field appearance="outline">
 			<mat-label>Дата виїзду</mat-label>
 			<input formControlName="outDate" matInput [matDatepicker]="picker2">
@@ -36,13 +41,10 @@
 			<mat-datepicker #picker2></mat-datepicker>
 		</mat-form-field>
 
-<!--------------------Тест------------------------- -->
-<!--------------------Тест------------------------- -->
-
-
-
-<!--------------------Тест------------------------- -->
-<!--------------------Тест------------------------- -->
+		<mat-form-field appearance="outline">
+			<mat-label>Час виїзду</mat-label>
+			<input formControlName="outTime" matInput inputmode="numeric" placeholder="Годин - Хвилин">
+		</mat-form-field>
 
 		<div [align]="'end'" mat-dialog-actions>
 			<button mat-dialog-close="" mat-raised-button>Отмена</button>

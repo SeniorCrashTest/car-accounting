@@ -21,7 +21,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule } from '@angular/material/paginator';
 import {MatSortModule } from '@angular/material/sort';
 import {LenghtPipe } from './pipe/lenght.pipe';
-import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
 
 
 
@@ -50,10 +51,11 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 		MatPaginatorModule,
 		MatSortModule,
 		FormsModule,
-		NgxMaterialTimepickerModule
 		
   ],
-  providers: [],
+	providers: [
+		{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+	],
   bootstrap: [AppComponent],
   exports: [
     LenghtPipe
